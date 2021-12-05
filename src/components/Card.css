@@ -1,0 +1,39 @@
+.card{
+    border: 2px solid black;
+    margin: 5rem;
+    width: 10rem;
+    min-width: 9rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+#closeIcon {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 6rem;
+    margin-top: 8px;
+  }
+  .temp{
+      text-align: center;
+  }
+  .card-title{
+      text-align: center;
+  }
+  .iconoClima{
+      background-color: rgb(2, 1, 1);
+      align-self: center;
+     margin-left: 55%; 
+     
+     
+  }
+
+  @media (min-width: 250px) and (max-width: 489px){
+      .card{
+          display: flex;
+          flex-direction: column;
+          min-width: 40%;
+          
+      }
+      .iconoClima{
+          margin-left: 17%;
+      }
+  }

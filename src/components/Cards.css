@@ -1,0 +1,12 @@
+.cards{
+    display: flex;
+}
+
+@media (min-width: 250px) and (max-width: 500px){
+   .cards{
+     display: flex;
+     flex-direction: column;
+     
+   }
+    
+}

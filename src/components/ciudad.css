@@ -1,0 +1,15 @@
+.ciudad{
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 2rem;
+    border: 2px solid black;
+    margin-right: 45%;
+    text-align: center;
+}
+
+@media (min-width: 250px) and (max-width: 500px){
+    .ciudad{
+        min-width: 40%;
+        margin-left: 30%;
+    }
+}

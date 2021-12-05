@@ -1,0 +1,111 @@
+#img-react{
+    align-items: left;
+    width: 35%;
+    height: 100%;
+    margin-top: 0%;
+}
+#nav{
+    background-color: aquamarine;
+    display: flex;
+    
+}
+#titulo{
+    margin-left: 0px;
+    margin-top: auto;
+    margin-bottom: 3rem;
+    align-items: left;
+    color: rgb(9, 37, 9)
+}
+#searchBar{
+    background-color: red;
+}
+#busqueda{
+    display: flex;
+    margin-left: 12rem;
+    justify-content: flex-end;
+    margin-top: 2.5rem;    
+}
+#botonEnviar{
+    color: rgba(0, 0, 0, 0.466);
+    background-color: bisque;
+    border-radius: 5px;
+   
+}
+ #botonEnviar:hover{
+    cursor: pointer; 
+    color: blue;    
+    background-color: tomato;   
+}
+
+@media (min-width: 250px) and (max-width: 489px) {
+    #img-react{
+        width: 4rem;
+        height: 5rem;
+    }
+    #titulo{
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+    #busqueda{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: -9rem;
+        max-width: 0.5rem;
+    }
+    #botonEnviar{
+        max-width: 5rem;
+    }
+}
+
+@media (min-widht: 490px) and (max-width: 730px){
+    #img-react{
+        width: 25%;
+    }
+    #titulo{
+        font-size: 1rem;
+        margin-left: 4rem;
+        text-align: center;
+    }
+    #inputBuscar{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0;
+        max-width: 3rem;
+    }
+    #botonEnviar{
+        color: rgba(0, 0, 0, 0.466);
+        background-color: bisque;
+        border-radius: 5px;
+        max-width: 1rem;
+    }
+     
+}
+
+@media (min-widht: 731px) and (max-width: 991px){
+    #nav{
+        background-color: red;
+    }
+    #img-react{
+        width: 25rem;
+    }
+    #titulo{
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+    #busqueda{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    #botonEnviar{
+        color: rgba(0, 0, 0, 0.466);
+        background-color: bisque;
+        border-radius: 5px;
+       
+    }
+   
+  
+}
+
+
+  
