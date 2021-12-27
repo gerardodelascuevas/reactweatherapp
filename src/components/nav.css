@@ -5,16 +5,16 @@
     margin-top: 0%;
 }
 #nav{
-    background-color: aquamarine;
+    background-color: rgb(20, 12, 138);
     display: flex;
     
 }
 #titulo{
     margin-left: 0px;
     margin-top: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2.3rem;
     align-items: left;
-    color: rgb(9, 37, 9)
+    color: white;
 }
 #searchBar{
     background-color: red;
@@ -26,15 +26,15 @@
     margin-top: 2.5rem;    
 }
 #botonEnviar{
-    color: rgba(0, 0, 0, 0.466);
-    background-color: bisque;
+    color: black;
+    background-color: white;
     border-radius: 5px;
    
 }
  #botonEnviar:hover{
     cursor: pointer; 
     color: blue;    
-    background-color: tomato;   
+    background-color: rgba(196, 194, 194, 0.993);   
 }
 
 @media (min-width: 250px) and (max-width: 489px) {
