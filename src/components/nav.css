@@ -16,9 +16,7 @@
     align-items: left;
     color: white;
 }
-#searchBar{
-    background-color: red;
-}
+
 #busqueda{
     display: flex;
     margin-left: 12rem;
@@ -37,75 +35,74 @@
     background-color: rgba(196, 194, 194, 0.993);   
 }
 
-@media (min-width: 250px) and (max-width: 489px) {
-    #img-react{
-        width: 4rem;
-        height: 5rem;
-    }
-    #titulo{
-        font-size: 1rem;
-        margin-left: 0.5rem;
-    }
-    #busqueda{
-        display: flex;
-        justify-content: flex-start;
-        margin-left: -9rem;
-        max-width: 0.5rem;
-    }
-    #botonEnviar{
-        max-width: 5rem;
-    }
-}
-
-@media (min-widht: 490px) and (max-width: 730px){
-    #img-react{
-        width: 25%;
-    }
-    #titulo{
-        font-size: 1rem;
-        margin-left: 4rem;
-        text-align: center;
-    }
-    #inputBuscar{
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 0;
-        max-width: 3rem;
-    }
-    #botonEnviar{
-        color: rgba(0, 0, 0, 0.466);
-        background-color: bisque;
-        border-radius: 5px;
-        max-width: 1rem;
-    }
-     
-}
-
-@media (min-widht: 731px) and (max-width: 991px){
+@media (max-width: 575px){
     #nav{
-        background-color: red;
+        width: 100%
     }
+
     #img-react{
-        width: 25rem;
+      width: 100%;
     }
     #titulo{
-        font-size: 1.5rem;
-        margin-left: 2rem;
+       width: 10px;
+       font-size: 1rem;
+    }
+     #busqueda{
+         width: 25%;
+     }
+     #inputBuscar{
+         width: 8rem;
+     }
+     .form-searchbar{
+         width: 70%;
+     }
+
+     
+ }
+ 
+ 
+ @media (min-width: 576px) and (max-width: 767px){
+    #nav{
+        width: 100%
     }
     #busqueda{
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 0;
+        margin-left: 18rem;
     }
-    #botonEnviar{
-        color: rgba(0, 0, 0, 0.466);
-        background-color: bisque;
-        border-radius: 5px;
-       
+    #img-react{
+      width: 80%;
     }
-   
-  
-}
+    #titulo{
+       width: 10px;
+       font-size: 2rem;
+    }
+     #busqueda{
+         width: 25%;
+     }
+     #inputBuscar{
+         width: 8rem;
+     }
+     .form-searchbar{
+         width: 70%;
+     }
+ }
+ 
+ 
+ @media (min-width: 768px) and (max-width: 991px){
+    #img-react{
+        width: 100%;
+    }
+    #titulo{
+        width: 22rem;
+        font-size: 2.5rem;
+        margin-left: 3rem;
+     }
 
+     #busqueda{
+        width: 40%;
+    }
 
+ }
+ 
+ 
+ 
   

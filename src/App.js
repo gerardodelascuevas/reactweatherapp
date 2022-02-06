@@ -1,45 +1,52 @@
 import React, { useState } from 'react';
 import './App.css';
 import Nav from './components/nav'
-import SearchBar from './components/searchBar';
 import Footer from './components/footer'
-import { Link } from 'react-router-dom'; 
 import Ciudad from './components/Ciudad'
 import Cards from './components/cards'
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-const apiKey = process.env.REACT_APP_apiKey
+//const apiKey = process.env.REACT_APP_apiKey
+const apiKey = 'b8fdbd0442d2af5ea3a745d022020ea2'
 
 function App() {
   const [cities, setCities] = useState([]);
   function onClose(id) {
-    setCities(oldCities => oldCities.filter(c => c.id !== id));
+    setCities(x => x.filter(c => c.id !== id));
   }
   function onSearch(ciudad) {
+    console.log(cities)
+    // if(ciudad.toLowerCase() === cities.includes() )
     //Llamado a la API del clima
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
       .then(r => r.json())
       .then((recurso) => {
-        if(recurso.main !== undefined){
-          const ciudad = {
-            min: Math.round(recurso.main.temp_min),
-            max: Math.round(recurso.main.temp_max),
-            img: recurso.weather[0].icon,
-            id: recurso.id,
-            wind: recurso.wind.speed,
-            temp: recurso.main.temp,
-            name: recurso.name,
-            weather: recurso.weather[0].main,
-            clouds: recurso.clouds.all,
-            latitud: recurso.coord.lat,
-            longitud: recurso.coord.lon
-          };
-          setCities(oldCities => [...oldCities, ciudad]);
-        } else {
-          alert("Ciudad no encontrada");
-        }
+
+        if(!cities.find(x => x.name === recurso.name)){
+            if(recurso.main !== undefined){
+              console.log(recurso)
+              const ciudad = {
+                min: Math.round(recurso.main.temp_min),
+                max: Math.round(recurso.main.temp_max),
+                img: recurso.weather[0].icon,
+                id: recurso.id,
+                wind: recurso.wind.speed,
+                temp: recurso.main.temp,
+                name: recurso.name,
+                weather: recurso.weather[0].main,
+                clouds: recurso.clouds.all,
+                latitud: recurso.coord.lat,
+                longitud: recurso.coord.lon
+              };          
+              setCities(oldCities =>[...oldCities, ciudad])       
+                
+            } else {
+              alert("Ciudad no encontrada");
+            }
+
+      }
       });
   }
   

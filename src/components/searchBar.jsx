@@ -4,7 +4,7 @@ import './nav.css'
 export default function SearchBar({onSearch}) {
   const [city, setCity] = useState("");
   return (
-    <form onSubmit={(e) => {
+    <form className="form-searchbar" onSubmit={(e) => {
       e.preventDefault();
       onSearch(city);
     }}>
