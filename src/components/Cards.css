@@ -1,15 +1,39 @@
 .cards{
   max-width: 100%;
   display: grid;
-  grid-template-columns: 4, 1fr;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-evenly;
     
 }
 
-@media (min-width: 250px) and (max-width: 500px){
-   .cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+@media (max-width: 575px) {
+ .cards{
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+ }
      
-   }    
 }
+/** dispositivos pequeños en vista landscape (horizontal) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .cards{
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+  }
+  
+
+}
+/** dispositivos medianos (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   }
+}
+/** dispositivos grandes (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+/** dispositivos extra grandes (monitores grandes, tvs) */
+@media (min-width: 1200px) {
+    
+}  

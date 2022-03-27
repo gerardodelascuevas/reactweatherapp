@@ -9,16 +9,18 @@ import Cards from './components/cards'
 import { BrowserRouter, Route } from 'react-router-dom';
 
 //const apiKey = process.env.REACT_APP_apiKey
-const apiKey = 'b8fdbd0442d2af5ea3a745d022020ea2'
+const REACT_APP_apiKey = process.env.REACT_APP_apiKey
 
 function App() {
+
   const [cities, setCities] = useState([]);
+
   function onClose(id) {
     setCities(oldCities => oldCities.filter(c => c.id !== id));
   }
   function onSearch(ciudad) {
     //Llamado a la API del clima
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${REACT_APP_apiKey}`)
       .then(r => r.json())
       .then((recurso) => {
         if(recurso.main !== undefined){
@@ -35,6 +37,8 @@ function App() {
             latitud: recurso.coord.lat,
             longitud: recurso.coord.lon
           };
+          let encontrado = cities.find(x=> x.id === ciudad.id) ? 
+          null : 
           setCities(oldCities => [...oldCities, ciudad]);
         } else {
           alert("Ciudad no encontrada");
