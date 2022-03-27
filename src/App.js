@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
 import Nav from './components/nav'
-import SearchBar from './components/searchBar';
 import Footer from './components/footer'
-import { Link } from 'react-router-dom'; 
 import Ciudad from './components/Ciudad'
 import Cards from './components/cards'
 
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-const apiKey = process.env.REACT_APP_apiKey
+//const apiKey = process.env.REACT_APP_apiKey
+const apiKey = 'b8fdbd0442d2af5ea3a745d022020ea2'
 
 function App() {
   const [cities, setCities] = useState([]);
