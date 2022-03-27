@@ -2,7 +2,7 @@
     font-family: Edwardian Script ITC;    
     text-decoration: none;
     margin-left: 90%;
-    margin-bottom: 90%; /* ESTO NO FUNCIONA */
+    margin-top: 90%; /* ESTO NO FUNCIONA */
     
     
 
@@ -15,18 +15,21 @@
 @media (min-width: 250px) and (max-width: 500px) {
   #footer{
       margin-left: 75%;
+      font-family: Edwardian Script ITC;    
   }
 }
 
 @media (min-width: 501px) and (max-width: 730px){
     #footer{
         margin-left: 70%;
+        font-family: Edwardian Script ITC;    
     }
     
 }
 @media (min-width: 731px) and (max-width: 1200px){
     #footer{
         margin-left: 85%;
+        font-family: Edwardian Script ITC;    
     } 
 
 
